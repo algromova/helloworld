@@ -1,0 +1,6 @@
+GET         /1.0/helloWorld                      hello_world.HelloWorldApp.getResult
+
+# Configuration for swagger api and swagger ui
+GET        /docs/                           controllers.Assets.at(path="/public/swagger-ui",file="index.html")
+GET        /docs/swagger.json               controllers.ApiHelpController.getResources
+GET        /docs/*file                      controllers.Assets.at(path="/public/swagger-ui",file)
